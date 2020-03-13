@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "postGIsConnector": {
+    "host": "localhost",
+    "port": "5432",
+    "url": "",
+    "database": "postgres",
+    "password": "mysql",
+    "name": "postGIsConnector",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}
