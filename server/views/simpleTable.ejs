@@ -1,0 +1,16 @@
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address</th>
+  </tr>
+  <% for(var person of query) {%>
+    <tr>
+      <td><%= person.id %></td>
+      <td><%= person.nome %></td>
+      <td><%= person.cognome %></td>
+      <td><%= person.indirizzo %></td>
+    </tr>
+  <%} %>
+</table>
