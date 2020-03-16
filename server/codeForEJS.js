@@ -10,7 +10,7 @@ const client = new Client({
   user : "postgres",
   password : "mysql",
   host : "localhost",
-  port : 5432
+  port : 5432,
   database : "postgres"
 })
 const databaseResult;
@@ -28,11 +28,11 @@ app.use(cors());
 app.set('views', path.join(__dirname, 'vies'));
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, databaseResult)) {
+app.get('/', function(request, databaseResult){
 
-  respone.render('index');
+  response.render('index');
 });
 
-app.listen(8000, function()){
+app.listen(8000, function(){
   console.log("table function is on 8000");
-}
+});
