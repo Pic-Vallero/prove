@@ -1,0 +1,16 @@
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address</th>
+  </tr>
+  <% for(var singlePerson of Personequery) {%>
+    <tr>
+      <td><%= singlePerson.id %></td>
+      <td><%= singlePerson.nome %></td>
+      <td><%= singlePerson.cognome %></td>
+      <td><%= singlePerson.indirizzo %></td>
+    </tr>
+  <%} %>
+</table>

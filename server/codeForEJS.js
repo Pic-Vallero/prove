@@ -5,22 +5,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-const {Client} = require('pg');
-const client = new Client({
-  user : "postgres",
-  password : "mysql",
-  host : "localhost",
-  port : 5432,
-  database : "postgres"
-})
-const databaseResult;
+const databaseResult = Personequery.find();
 const app = express();
-
-client.connect()
-.then(() => cosole.log("Connection successfuly"))
-.then(databaseResult = client.query("SELECT * FROM queryPersone"))
-.catch(e => console.log(e))
-.finally(() => client.end())
 
 app.use(bodyParser());
 app.use(cors());
@@ -30,7 +16,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, databaseResult){
 
-  response.render('index');
+  response.render('index', );
 });
 
 app.listen(8000, function(){
