@@ -1,18 +1,21 @@
 <table style="width:100%">
-  <tr>
-    <th>ID</th>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Address</th>
-  </tr>
-  <% const entries = Object.entries(data) 
-   for (const [id, Nome, Cognome, Indirizzo] of entries){%>
     <tr>
-      <td><%= id %></td>
-      <td><%= Nome %></td>
-      <td><%= Cognome %></td>
-      <td><%= Indirizzo %></td>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Address</th>
     </tr>
-  <% } %>
+    <%
+    data.forEach(record => {
+    %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.Nome %></td>
+            <td><%= record.Cognome %></td>
+            <td><%= record.Indirizzo %></td>
+        </tr>
+    <%
+    })
+    %>
 </table>
 
