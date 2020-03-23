@@ -14,19 +14,6 @@ module.exports = function (app) {
 
     app.get('/tableData', function(request, response){
         const databaseResult = PersoneQuery.find({/* getting all the data */}, function(err, accounts) { /* ... */ });
-        response.render('simpleTable', {data : [
-          {
-            "Nome": "Mario",
-            "Cognome": "Rossi",
-            "Indirizzo": "Via Buschi 10",
-            "id": 1
-          },
-          {
-            "Nome": "Luigi",
-            "Cognome": "Blu",
-            "Indirizzo": "Via Clericetti 10",
-            "id": 2
-          }
-        ]});
+        response.render('simpleTable', {data : databaseResult });
       });
 }

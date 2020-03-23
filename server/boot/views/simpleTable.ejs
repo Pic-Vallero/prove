@@ -5,12 +5,14 @@
     <th>Lastname</th>
     <th>Address</th>
   </tr>
-  <% data.forEach(singlePerson => {%>
+  <% const entries = Object.entries(data) 
+   for (const [id, Nome, Cognome, Indirizzo] of entries){%>
     <tr>
-      <td><%= singlePerson.id %></td>
-      <td><%= singlePerson.Nome %></td>
-      <td><%= singlePerson.Cognome %></td>
-      <td><%= singlePerson.Indirizzo %></td>
+      <td><%= id %></td>
+      <td><%= Nome %></td>
+      <td><%= Cognome %></td>
+      <td><%= Indirizzo %></td>
     </tr>
-  <% }); %>
+  <% } %>
 </table>
+
